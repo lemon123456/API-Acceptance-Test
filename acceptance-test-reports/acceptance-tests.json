@@ -1,0 +1,116 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-03-29T01:34:03.501Z",
+    "end": "2018-03-29T01:34:03.511Z",
+    "duration": 10,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "c6a47c55-ff26-4435-a1f9-b178f442c09e",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "e8ce5a7d-7350-4930-99e8-95406d10079d",
+        "title": "Feature: Open Notify",
+        "fullFile": "/Users/twer/Documents/AutoTest/SuperTest/API-Acceptance-test/features/apis/openNotify.feature.js",
+        "file": "/features/apis/openNotify.feature.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [],
+        "suites": [
+          {
+            "uuid": "4d005f34-f0aa-4dcb-ae70-aedfca202e51",
+            "title": "Scenario: international space station pass times",
+            "fullFile": "/Users/twer/Documents/AutoTest/SuperTest/API-Acceptance-test/features/apis/openNotify.feature.js",
+            "file": "/features/apis/openNotify.feature.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "When request response",
+                "fullTitle": "Feature: Open Notify Scenario: international space station pass times When request response",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "const lat = 80;\nconst lon = 100;\nconsole.log(\"suceess\");",
+                "err": {},
+                "isRoot": false,
+                "uuid": "918b6de9-b35b-4d50-be62-a8b12c71ed36",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "Then the api will respond with 200",
+                "fullTitle": "Feature: Open Notify Scenario: international space station pass times Then the api will respond with 200",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "",
+                "err": {},
+                "isRoot": false,
+                "uuid": "a6d58566-5068-4a86-be97-0490f458815e",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [
+              "918b6de9-b35b-4d50-be62-a8b12c71ed36",
+              "a6d58566-5068-4a86-be97-0490f458815e"
+            ],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 0,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 1000000
+          }
+        ],
+        "passes": [],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 1000000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 1000000
+  },
+  "copyrightYear": 2018
+}

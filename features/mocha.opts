@@ -1,0 +1,7 @@
+--require babel-register
+--require ./features/setup.js
+--require chai/register-expect
+--reporter mochawesome
+--reporter-options reportDir=acceptance-test-reports,reportFilename=acceptance-tests,reportTitle=acceptance-tests
+--ui mocha-cakes-2
+--timeout 1000000
