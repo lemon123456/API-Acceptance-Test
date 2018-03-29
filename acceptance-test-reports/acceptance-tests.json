@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 2,
-    "tests": 2,
-    "passes": 2,
+    "suites": 4,
+    "tests": 6,
+    "passes": 6,
     "pending": 0,
     "failures": 0,
-    "start": "2018-03-29T08:00:09.125Z",
-    "end": "2018-03-29T08:00:10.372Z",
-    "duration": 1247,
-    "testsRegistered": 2,
+    "start": "2018-03-29T10:05:45.598Z",
+    "end": "2018-03-29T10:05:46.866Z",
+    "duration": 1268,
+    "testsRegistered": 6,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "dfed7945-07c0-466f-a329-08380a0c967f",
+    "uuid": "60f512ba-f605-4a3b-97db-5cf10e4f7ea7",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "7b0be000-8d67-48b7-93cd-ab460a24183d",
+        "uuid": "486bf30c-b189-46cc-8f7b-c3ec7077e4f2",
         "title": "Feature: Open Notify",
         "fullFile": "/Users/twer/Documents/AutoTest/SuperTest/API-Acceptance-test/features/apis/openNotify.feature.js",
         "file": "/features/apis/openNotify.feature.js",
@@ -37,7 +37,7 @@
         "tests": [],
         "suites": [
           {
-            "uuid": "a0a7b981-8c6a-4ab3-ad5e-036b3121b2a2",
+            "uuid": "a92ccde5-e944-4c36-98b6-69b3823596e4",
             "title": "Scenario: international space station pass times",
             "fullFile": "/Users/twer/Documents/AutoTest/SuperTest/API-Acceptance-test/features/apis/openNotify.feature.js",
             "file": "/features/apis/openNotify.feature.js",
@@ -45,10 +45,10 @@
             "afterHooks": [],
             "tests": [
               {
-                "title": "When request response",
-                "fullTitle": "Feature: Open Notify Scenario: international space station pass times When request response",
+                "title": "When request pass times",
+                "fullTitle": "Feature: Open Notify Scenario: international space station pass times When request pass times",
                 "timedOut": false,
-                "duration": 1232,
+                "duration": 683,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -57,37 +57,149 @@
                 "code": "done => {\n            const lat = 50;\n            const lon = 50;\n            const handler = Apis.createHandler(holder, done);\n            Apis.times(lat, lon).expect(200).end(handler);",
                 "err": {},
                 "isRoot": false,
-                "uuid": "dd7df359-19a1-4199-991d-fe5517eb77af",
+                "uuid": "1cb963c7-21de-40f1-92c0-7bb72dbb2a22",
                 "isHook": false,
                 "skipped": false
               },
               {
-                "title": "Then the api will respond with 200",
-                "fullTitle": "Feature: Open Notify Scenario: international space station pass times Then the api will respond with 200",
+                "title": "Then the api will respond with duration and risetime",
+                "fullTitle": "Feature: Open Notify Scenario: international space station pass times Then the api will respond with duration and risetime",
                 "timedOut": false,
-                "duration": 5,
+                "duration": 1,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "const data = Fixtures.load('test.json');\nconsole.log('################ %j', data);\nexpect(holder.resp.body.response).to.deep.include({ duration: 93, risetime: 1522328229 });\nexpect(holder.resp.body.response).to.deep.include({ duration: 578, risetime: 1522333707 });",
+                "code": "expect(holder.resp.body).to.have.all.keys('message', 'request', 'response');",
                 "err": {},
                 "isRoot": false,
-                "uuid": "0f330fbb-e2d0-4bb1-8bb2-4703a463fa8d",
+                "uuid": "833381a7-c1b6-4c5b-97ec-55aaa88d7066",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "dd7df359-19a1-4199-991d-fe5517eb77af",
-              "0f330fbb-e2d0-4bb1-8bb2-4703a463fa8d"
+              "1cb963c7-21de-40f1-92c0-7bb72dbb2a22",
+              "833381a7-c1b6-4c5b-97ec-55aaa88d7066"
             ],
             "failures": [],
             "pending": [],
             "skipped": [],
-            "duration": 1237,
+            "duration": 684,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 1000000
+          },
+          {
+            "uuid": "bdf3f048-da0b-451d-aadc-9260f91a0047",
+            "title": "Scenario: how many people are in space right now",
+            "fullFile": "/Users/twer/Documents/AutoTest/SuperTest/API-Acceptance-test/features/apis/openNotify.feature.js",
+            "file": "/features/apis/openNotify.feature.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "When request people in space",
+                "fullTitle": "Feature: Open Notify Scenario: how many people are in space right now When request people in space",
+                "timedOut": false,
+                "duration": 567,
+                "state": "passed",
+                "speed": "slow",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "const response = await Apis.astros();\nexpect(response.status).to.equal(200);\nholder.resp = response;",
+                "err": {},
+                "isRoot": false,
+                "uuid": "32432311-396e-4295-a8e6-50baa2acefc8",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "Then the api will responde with people name and craft",
+                "fullTitle": "Feature: Open Notify Scenario: how many people are in space right now Then the api will responde with people name and craft",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "expect(holder.resp.body).to.have.all.keys('message', 'number', 'people');",
+                "err": {},
+                "isRoot": false,
+                "uuid": "35d9f5a6-3518-4c56-93e9-272388d8dd51",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [
+              "32432311-396e-4295-a8e6-50baa2acefc8",
+              "35d9f5a6-3518-4c56-93e9-272388d8dd51"
+            ],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 567,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 1000000
+          },
+          {
+            "uuid": "b7b97dd3-7d7f-494a-af98-b48faf12286a",
+            "title": "Scenario: read data from fixture",
+            "fullFile": "/Users/twer/Documents/AutoTest/SuperTest/API-Acceptance-test/features/apis/openNotify.feature.js",
+            "file": "/features/apis/openNotify.feature.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "When read test file",
+                "fullTitle": "Feature: Open Notify Scenario: read data from fixture When read test file",
+                "timedOut": false,
+                "duration": 1,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "const data = Fixtures.load('test.json');\nholder.resp = data;",
+                "err": {},
+                "isRoot": false,
+                "uuid": "9480671c-3186-4c01-b6af-92f36f87803b",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "Then output the file data",
+                "fullTitle": "Feature: Open Notify Scenario: read data from fixture Then output the file data",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "console.log('########### %j', holder.resp);",
+                "err": {},
+                "isRoot": false,
+                "uuid": "f80995b0-5684-4763-81d9-ce5352ec2d8e",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [
+              "9480671c-3186-4c01-b6af-92f36f87803b",
+              "f80995b0-5684-4763-81d9-ce5352ec2d8e"
+            ],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 1,
             "root": false,
             "rootEmpty": false,
             "_timeout": 1000000

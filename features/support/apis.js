@@ -22,9 +22,15 @@ function times(lat, lon) {
     return httpClient.get(uri);
 }
 
+function astros() {
+    const uri = '/astros.json';
+    return httpClient.get(uri);
+}
+
 const Apis = {
     createHandler,
     times,
+    astros,
     init: (opts = {}) => {
         Object.assign(defaultOptions, opts);
         return Apis;

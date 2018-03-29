@@ -2,7 +2,7 @@ Feature('Open Notify', () => {
     Scenario('international space station pass times', () => {
         const holder = {};
 
-        When('request response', (done) => {
+        When('request pass times', (done) => {
             const lat = 50;
             const lon = 50;
             const handler = Apis.createHandler(holder, done);
@@ -10,11 +10,35 @@ Feature('Open Notify', () => {
 
         });
 
-        Then('the api will respond with 200', () => {
+        Then('the api will respond with duration and risetime', () => {
+            expect(holder.resp.body).to.have.all.keys('message', 'request', 'response');
+        });
+    });
+
+    Scenario('how many people are in space right now', () => {
+        const holder = {};
+
+        When('request people in space', async () => {
+            const response = await Apis.astros();
+            expect(response.status).to.equal(200);
+            holder.resp = response;
+        });
+
+        Then('the api will responde with people name and craft', () => {
+            expect(holder.resp.body).to.have.all.keys('message', 'number', 'people');
+        });
+    });
+
+    Scenario('read data from fixture', () => {
+        const holder = {};
+
+        When('read test file', () => {
             const data = Fixtures.load('test.json');
-            console.log('################ %j', data);
-            expect(holder.resp.body.response).to.deep.include({ duration: 93, risetime: 1522328229 });
-            expect(holder.resp.body.response).to.deep.include({ duration: 578, risetime: 1522333707 });
+            holder.resp = data;
+        });
+
+        Then('output the file data', () => {
+            console.log('########### %j', holder.resp);
         });
     });
 });
