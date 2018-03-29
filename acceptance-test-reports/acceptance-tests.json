@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2018-03-29T01:34:03.501Z",
-    "end": "2018-03-29T01:34:03.511Z",
-    "duration": 10,
+    "start": "2018-03-29T03:37:07.388Z",
+    "end": "2018-03-29T03:37:07.405Z",
+    "duration": 17,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "c6a47c55-ff26-4435-a1f9-b178f442c09e",
+    "uuid": "4816bfdc-970e-46e7-9927-7c0336618c35",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "e8ce5a7d-7350-4930-99e8-95406d10079d",
+        "uuid": "ab51a73f-965c-4255-ab5a-65fff11a6bcd",
         "title": "Feature: Open Notify",
         "fullFile": "/Users/twer/Documents/AutoTest/SuperTest/API-Acceptance-test/features/apis/openNotify.feature.js",
         "file": "/features/apis/openNotify.feature.js",
@@ -37,7 +37,7 @@
         "tests": [],
         "suites": [
           {
-            "uuid": "4d005f34-f0aa-4dcb-ae70-aedfca202e51",
+            "uuid": "f10af14f-0f22-4f01-8e20-aabb4d761be1",
             "title": "Scenario: international space station pass times",
             "fullFile": "/Users/twer/Documents/AutoTest/SuperTest/API-Acceptance-test/features/apis/openNotify.feature.js",
             "file": "/features/apis/openNotify.feature.js",
@@ -57,7 +57,7 @@
                 "code": "const lat = 80;\nconst lon = 100;\nconsole.log(\"suceess\");",
                 "err": {},
                 "isRoot": false,
-                "uuid": "918b6de9-b35b-4d50-be62-a8b12c71ed36",
+                "uuid": "a26f43e5-db03-494b-9e66-c952579fc9d8",
                 "isHook": false,
                 "skipped": false
               },
@@ -65,29 +65,29 @@
                 "title": "Then the api will respond with 200",
                 "fullTitle": "Feature: Open Notify Scenario: international space station pass times Then the api will respond with 200",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 1,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "",
+                "code": "const data = Fixtures.load('test.json');\nconsole.log('################ %j', data);",
                 "err": {},
                 "isRoot": false,
-                "uuid": "a6d58566-5068-4a86-be97-0490f458815e",
+                "uuid": "bd2da7b1-3cf5-4b98-8179-11c97f484de9",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "918b6de9-b35b-4d50-be62-a8b12c71ed36",
-              "a6d58566-5068-4a86-be97-0490f458815e"
+              "a26f43e5-db03-494b-9e66-c952579fc9d8",
+              "bd2da7b1-3cf5-4b98-8179-11c97f484de9"
             ],
             "failures": [],
             "pending": [],
             "skipped": [],
-            "duration": 0,
+            "duration": 1,
             "root": false,
             "rootEmpty": false,
             "_timeout": 1000000
