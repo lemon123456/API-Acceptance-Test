@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2018-03-29T03:37:07.388Z",
-    "end": "2018-03-29T03:37:07.405Z",
-    "duration": 17,
+    "start": "2018-03-29T08:00:09.125Z",
+    "end": "2018-03-29T08:00:10.372Z",
+    "duration": 1247,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "4816bfdc-970e-46e7-9927-7c0336618c35",
+    "uuid": "dfed7945-07c0-466f-a329-08380a0c967f",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "ab51a73f-965c-4255-ab5a-65fff11a6bcd",
+        "uuid": "7b0be000-8d67-48b7-93cd-ab460a24183d",
         "title": "Feature: Open Notify",
         "fullFile": "/Users/twer/Documents/AutoTest/SuperTest/API-Acceptance-test/features/apis/openNotify.feature.js",
         "file": "/features/apis/openNotify.feature.js",
@@ -37,7 +37,7 @@
         "tests": [],
         "suites": [
           {
-            "uuid": "f10af14f-0f22-4f01-8e20-aabb4d761be1",
+            "uuid": "a0a7b981-8c6a-4ab3-ad5e-036b3121b2a2",
             "title": "Scenario: international space station pass times",
             "fullFile": "/Users/twer/Documents/AutoTest/SuperTest/API-Acceptance-test/features/apis/openNotify.feature.js",
             "file": "/features/apis/openNotify.feature.js",
@@ -48,16 +48,16 @@
                 "title": "When request response",
                 "fullTitle": "Feature: Open Notify Scenario: international space station pass times When request response",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 1232,
                 "state": "passed",
-                "speed": "fast",
+                "speed": "slow",
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "const lat = 80;\nconst lon = 100;\nconsole.log(\"suceess\");",
+                "code": "done => {\n            const lat = 50;\n            const lon = 50;\n            const handler = Apis.createHandler(holder, done);\n            Apis.times(lat, lon).expect(200).end(handler);",
                 "err": {},
                 "isRoot": false,
-                "uuid": "a26f43e5-db03-494b-9e66-c952579fc9d8",
+                "uuid": "dd7df359-19a1-4199-991d-fe5517eb77af",
                 "isHook": false,
                 "skipped": false
               },
@@ -65,29 +65,29 @@
                 "title": "Then the api will respond with 200",
                 "fullTitle": "Feature: Open Notify Scenario: international space station pass times Then the api will respond with 200",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 5,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "const data = Fixtures.load('test.json');\nconsole.log('################ %j', data);",
+                "code": "const data = Fixtures.load('test.json');\nconsole.log('################ %j', data);\nexpect(holder.resp.body.response).to.deep.include({ duration: 93, risetime: 1522328229 });\nexpect(holder.resp.body.response).to.deep.include({ duration: 578, risetime: 1522333707 });",
                 "err": {},
                 "isRoot": false,
-                "uuid": "bd2da7b1-3cf5-4b98-8179-11c97f484de9",
+                "uuid": "0f330fbb-e2d0-4bb1-8bb2-4703a463fa8d",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "a26f43e5-db03-494b-9e66-c952579fc9d8",
-              "bd2da7b1-3cf5-4b98-8179-11c97f484de9"
+              "dd7df359-19a1-4199-991d-fe5517eb77af",
+              "0f330fbb-e2d0-4bb1-8bb2-4703a463fa8d"
             ],
             "failures": [],
             "pending": [],
             "skipped": [],
-            "duration": 1,
+            "duration": 1237,
             "root": false,
             "rootEmpty": false,
             "_timeout": 1000000

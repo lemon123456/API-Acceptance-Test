@@ -18,11 +18,12 @@ function createHandler(holder, done) {
 }
 
 function times(lat, lon) {
-    const uri = '/iss-pass';
-    return httpClient.get(uri).query({lat, lon});
+    const uri = `/iss-pass.json?lat=${lat}&lon=${lon}`;
+    return httpClient.get(uri);
 }
 
 const Apis = {
+    createHandler,
     times,
     init: (opts = {}) => {
         Object.assign(defaultOptions, opts);
