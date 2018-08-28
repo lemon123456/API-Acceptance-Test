@@ -16,3 +16,9 @@ $ yarn install
 ```bash
 $ yarn run acceptance
 ```
+
+###Run in Docker
+```bash
+$ docker build -t demo:ApiTest .
+$ docker run demo
+```
